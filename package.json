@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Rostyslav-afk/mini-project-2weeks#readme",
   "devDependencies": {
-    "parcel": "^2.16.1"
+    "parcel": "^2.16.1",
+    "pnotify": "^5.2.0"
   }
 }
