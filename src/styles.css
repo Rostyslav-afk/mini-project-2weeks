@@ -1,9 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-   RESET CSS
-*/
-
+/* Reset */
 html,
 body,
 div,
@@ -92,7 +87,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -106,17 +101,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -124,27 +123,33 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* Default */
+/* Base */
 body {
-  background-color: #fff;
+  background-color: #f5f5f5;
   color: #171717;
-  font-family: "Lexend Deca";
+  font-family: "Lexend Deca", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* App */
 .app {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
 }
+
 .app-input {
   background-color: #222630;
   padding: 0.75rem 1rem;
@@ -155,6 +160,7 @@ body {
   border-radius: 0.5rem;
   border: 2px solid #2b3040;
   transition: border-color 0.1s;
+  font-size: 1rem;
 }
 
 .app-input:focus {
@@ -162,7 +168,7 @@ body {
 }
 
 .app-cname {
-  font-size: 25px;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
@@ -171,6 +177,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .app-cinfo {
@@ -179,11 +187,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 25px;
-  font-size: 20px;
+  font-size: 1.1rem;
 }
 
 .app-subtitle-info {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   color: #404040;
 }
 
@@ -194,10 +202,93 @@ body {
   align-items: center;
   gap: 15px;
   margin-top: 20px;
-  list-style: disc;
 }
 
 .clanguages-subtitle {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   color: #404040;
+}
+
+.app-cimage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* Responsive */
+
+/* Pc */
+@media (max-width: 1024px) {
+  .app-box {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .app-cinfo {
+    font-size: 1rem;
+  }
+
+  .app-cname {
+    font-size: 1.4rem;
+  }
+
+  .app-input {
+    width: 70%;
+    max-width: 400px;
+  }
+
+  .app-cimage img {
+    width: 300px;
+  }
+}
+
+/* Tablets*/
+@media (max-width: 767px) {
+  .app {
+    padding: 2rem 1rem;
+  }
+
+  .app-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .app-input {
+    width: 100%;
+    max-width: 350px;
+    font-size: 1rem;
+  }
+
+  .app-cname {
+    font-size: 1.3rem;
+  }
+
+  .app-cinfo {
+    font-size: 0.95rem;
+    gap: 15px;
+  }
+
+  .app-cimage img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .app-cname {
+    font-size: 1.1rem;
+  }
+
+  .app-input {
+    font-size: 0.9rem;
+  }
+
+  .app-cinfo {
+    font-size: 0.85rem;
+  }
+
+  .app-cimage img {
+    width: 100%;
+  }
 }
