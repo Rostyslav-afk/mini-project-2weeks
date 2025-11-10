@@ -151,20 +151,29 @@ body {
 }
 
 .app-input {
-  background-color: #222630;
-  padding: 0.75rem 1rem;
-  margin-bottom: 20px;
-  outline: none;
-  width: 280px;
-  color: white;
-  border-radius: 0.5rem;
-  border: 2px solid #2b3040;
-  transition: border-color 0.1s;
-  font-size: 16px;
+  background-color: #eee;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 13em;
+  border-radius: 1rem;
+  color: lightcoral;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+  margin-bottom: 35px;
 }
 
 .app-input:focus {
-  border-color: #596a95;
+  outline-color: lightcoral;
+}
+
+.app-list{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; 
+  gap: 5px;
+  list-style: disc;
 }
 
 .app-cname {
@@ -192,6 +201,7 @@ body {
 
 .app-subtitle-info {
   font-family: "Roboto", sans-serif;
+  font-weight: 500;
   color: #404040;
 }
 
@@ -206,6 +216,7 @@ body {
 
 .clanguages-subtitle {
   font-family: "Roboto", sans-serif;
+  font-weight: 500;
   color: #404040;
 }
 
